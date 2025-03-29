@@ -1,5 +1,7 @@
 package umg.edu.progra.listas;
 
+import umg.edu.progra.listas.doblementeEnlazada.DoblementeEnlazada;
+
 /**
  *
  * @author Walter Cordova
@@ -94,6 +96,38 @@ public class Principal {
         lista1.separarParesImpares(pares, impares);
         System.out.println("Lista de pares: " + pares);
         System.out.println("Lista de impares: " + impares);
+        
+        //
+        
+        DoblementeEnlazada dll = new DoblementeEnlazada();
+         dll.insertAtEnd(10);
+         dll.insertAtEnd(20);
+         dll.insertAtEnd(30);
+         dll.insertAtEnd(40);
+         dll.insertAtEnd(50);
+         dll.insertAtBeginning(5);
+         
+         System.out.println("\nLista en orden:");
+         dll.displayForward();
+         
+         System.out.println("\nLista en orden inverso:");
+         dll.displayBackward();
+         
+         //System.out.println("\nEliminando 20: " + dll.delete(20));
+         dll.displayForward();
+         
+         //System.out.println("Buscando 10: " + dll.search(10));
+         System.out.println("\nBuscando 50: " + dll.search(50));
+         
+         //contar nodos en lista doblementeEnlazada
+         System.out.println("\nCantidad de nodos: " + dll.contarNumeroNodos());
+         
+         //Revertir nodos en lista doblementeEnlazada
+         System.out.println("\nLista revertida: ");
+         dll.revertirLista();
+         dll.displayForward();
     }
+    
+    
 
 }
